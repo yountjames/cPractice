@@ -10,6 +10,8 @@ void whileExample();
 void forExample();
 void twoDimensionalArray();
 void accessmemoryaddressExample();
+void pointerExample();
+void filewriteExample();
 
 struct Student
 {
@@ -29,6 +31,8 @@ int main()
 	//forExample();
 	//twoDimensionalArray();
 	//accessmemoryaddressExample();
+	//pointerExample();
+	filewriteExample();
 
 
 
@@ -170,4 +174,26 @@ void accessmemoryaddressExample()
 	char grade = 'A';
 
 	printf("age: %p\ngpa: %p\ngrade: %p\n", &age, &gpa, &grade);
+}
+
+void pointerExample()
+{
+	int age = 30;
+	int *pAge = &age;  //pointer variable storing the age address
+	double gpa = 3.4;
+	int *pGpa = &gpa;
+	char grade = 'A';
+	char *pGrade = &grade;
+
+	printf("%p", pAge);  //will display address of age
+	printf("\n");
+	printf("%d", *pAge); //dereferenced pointer, meaning *pAge is the value at age
+	
+
+}
+
+void filewriteExample()
+{
+
+
 }
