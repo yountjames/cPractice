@@ -7,6 +7,9 @@ void ifExample();
 void switchExample();
 void structExample();
 void whileExample();
+void forExample();
+void twoDimensionalArray();
+void accessmemoryaddressExample();
 
 struct Student
 {
@@ -22,7 +25,11 @@ int main()
 	//ifExample();
 	//switchExample();
 	//structExample();  //notice struct definition above
-	whileExample();
+	//whileExample();
+	//forExample();
+	//twoDimensionalArray();
+	//accessmemoryaddressExample();
+
 
 
 
@@ -124,4 +131,43 @@ void whileExample()
 		i++;
 	}
 
+}
+
+void forExample()
+{
+	for(int i = 0;i<20;i++)
+	{
+		printf("%d ", i);
+	}
+
+}
+
+void twoDimensionalArray()
+{
+
+	int nums[3][2] = {
+					{1,2},
+					{3,4},
+					{5,6}
+					};
+
+	//printf("%d", nums[1][1]);
+
+	for(int i=0; i<3; i++)
+	{ 
+		for(int j=0; j<2; j++)
+		{
+			printf("%d, ", nums[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void accessmemoryaddressExample()
+{
+	int age = 30;
+	double gpa = 3.03;
+	char grade = 'A';
+
+	printf("age: %p\ngpa: %p\ngrade: %p\n", &age, &gpa, &grade);
 }
