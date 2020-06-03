@@ -221,7 +221,7 @@ void filereadExample()
 
 	printf("%s", line);
 
-	fgets(line, 255, fpointer); //read first line into line
+	fgets(line, 255, fpointer); //read second line into line
 
 	printf("\n%s", line);  
 
