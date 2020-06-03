@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_DEPRECATE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -12,6 +14,7 @@ void twoDimensionalArray();
 void accessmemoryaddressExample();
 void pointerExample();
 void filewriteExample();
+void filereadExample();
 
 struct Student
 {
@@ -32,7 +35,8 @@ int main()
 	//twoDimensionalArray();
 	//accessmemoryaddressExample();
 	//pointerExample();
-	filewriteExample();
+	//filewriteExample();
+	filereadExample();
 
 
 
@@ -194,6 +198,33 @@ void pointerExample()
 
 void filewriteExample()
 {
+	FILE * fpointer = fopen("E:\\Desktop\\employees.txt", "w"); //create folder at that directory, use w to create and override, a if you want to append with fprintf
 
+	fprintf(fpointer, "Write some stuff\nWrite some more stuff"); //if existing text in file, completely overrites with this
+
+	fclose(fpointer); //close it
+
+	FILE * fpointer2 = fopen("E:\\Desktop\\employees.txt", "a"); //append
+
+	fprintf(fpointer2, "\nThird line of stuff"); //will append data now
+
+	fclose(fpointer2); //close it
+
+}
+
+void filereadExample()
+{
+	char line[255];
+	FILE * fpointer = fopen("E:\\Desktop\\employees.txt", "r");  //read information from file
+
+	fgets(line, 255, fpointer); //read first line into line
+
+	printf("%s", line);
+
+	fgets(line, 255, fpointer); //read first line into line
+
+	printf("\n%s", line);  
+
+	fclose(fpointer);
 
 }
