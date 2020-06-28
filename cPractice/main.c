@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_DEPRECATE
 
-//git test comment 6/28 blah blah blah
+//git test from desktop
 
 #include <stdio.h>
 #include <stdlib.h>
