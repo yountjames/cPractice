@@ -1,9 +1,10 @@
-#define _CRT_SECURE_NO_DEPRECATE
+﻿#define _CRT_SECURE_NO_DEPRECATE
 
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <wchar.h>
 
 void basics(char name[]);
 void ifExample();
@@ -16,6 +17,7 @@ void accessmemoryaddressExample();
 void pointerExample();
 void filewriteExample();
 void filereadExample();
+void tetris();
 
 struct Student
 {
@@ -25,9 +27,10 @@ struct Student
 	double gpa;
 };
 
+
 int main()
 {
-	//basics("James");
+	basics("James");
 	//ifExample();
 	//switchExample();
 	//structExample();  //notice struct definition above
@@ -37,12 +40,13 @@ int main()
 	//accessmemoryaddressExample();
 	//pointerExample();
 	//filewriteExample();
-	filereadExample();
+	//filereadExample();
+	//tetris();
 
 
 
 
-
+	
 	return 0;
 
 }
@@ -62,7 +66,7 @@ void basics(char name[])
 	printf("You are %d", myage);
 
 	int numbers[] = { 2, 4, 6, 8 };
-	printf("\nArray index 2 is %d", numbers[2]);
+	printf("\nArray index 2 is %d\n", numbers[2]);
 
 
 	//char str2[30];
@@ -227,5 +231,11 @@ void filereadExample()
 	printf("\n%s", line);  
 
 	fclose(fpointer);
+
+}
+
+void tetris()
+{
+	
 
 }
